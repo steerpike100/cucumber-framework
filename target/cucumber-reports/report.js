@@ -6,6 +6,10 @@ formatter.feature({
   "id": "login-to-account",
   "keyword": "Feature"
 });
+formatter.before({
+  "duration": 4025235900,
+  "status": "passed"
+});
 formatter.scenario({
   "line": 4,
   "name": "Login to account with correct credentials",
@@ -44,28 +48,46 @@ formatter.step({
   "name": "User should be taken to the successful login page",
   "keyword": "Then "
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "LoginSteps.user_navigates_to_stackoverflow_website()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 63680400,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "LoginSteps.user_clicks_on_the_login_button_on_homepage()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 59100,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "LoginSteps.user_enters_a_valid_username()"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 67300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginSteps.user_enters_a_valid_password()"
+});
+formatter.result({
+  "duration": 49400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginSteps.user_clicks_on_the_login_button()"
+});
+formatter.result({
+  "duration": 141000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginSteps.user_should_be_taken_to_the_successful_login_page()"
+});
+formatter.result({
+  "duration": 70700,
+  "status": "passed"
 });
 });

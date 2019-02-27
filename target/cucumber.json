@@ -3,6 +3,17 @@
     "line": 1,
     "elements": [
       {
+        "before": [
+          {
+            "result": {
+              "duration": 4025235900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginSteps.setUp()"
+            }
+          }
+        ],
         "line": 4,
         "name": "Login to account with correct credentials",
         "description": "",
@@ -12,56 +23,74 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 63680400,
+              "status": "passed"
             },
             "line": 5,
             "name": "User navigates to stackoverflow website",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.user_navigates_to_stackoverflow_website()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 59100,
+              "status": "passed"
             },
             "line": 6,
             "name": "User clicks on the login button on homepage",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.user_clicks_on_the_login_button_on_homepage()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 67300,
+              "status": "passed"
             },
             "line": 7,
             "name": "User enters a valid username",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.user_enters_a_valid_username()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 49400,
+              "status": "passed"
             },
             "line": 8,
             "name": "User enters a valid password",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.user_enters_a_valid_password()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 141000,
+              "status": "passed"
             },
             "line": 9,
             "name": "User clicks on the login button",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.user_clicks_on_the_login_button()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 70700,
+              "status": "passed"
             },
             "line": 10,
             "name": "User should be taken to the successful login page",
-            "match": {},
+            "match": {
+              "location": "LoginSteps.user_should_be_taken_to_the_successful_login_page()"
+            },
             "keyword": "Then "
           }
         ]
