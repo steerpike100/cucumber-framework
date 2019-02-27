@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 939054600,
+              "duration": 868037700,
               "status": "passed"
             },
             "line": 10,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 3122658300,
+              "duration": 3152661000,
               "status": "passed"
             },
             "line": 11,
@@ -39,11 +39,11 @@
         "before": [
           {
             "result": {
-              "duration": 2706783300,
+              "duration": 4462008400,
               "status": "passed"
             },
             "match": {
-              "location": "ContactUsSteps.setUp()"
+              "location": "ContactUsSteps.setUpChrome()"
             }
           }
         ],
@@ -54,7 +54,7 @@
         "after": [
           {
             "result": {
-              "duration": 669460400,
+              "duration": 781626200,
               "status": "passed"
             },
             "match": {
@@ -67,7 +67,7 @@
         "steps": [
           {
             "result": {
-              "duration": 214262500,
+              "duration": 368290300,
               "status": "passed"
             },
             "line": 15,
@@ -79,7 +79,7 @@
           },
           {
             "result": {
-              "duration": 79122100,
+              "duration": 126287900,
               "status": "passed"
             },
             "line": 16,
@@ -101,7 +101,7 @@
           },
           {
             "result": {
-              "duration": 149773400,
+              "duration": 239326800,
               "status": "passed"
             },
             "line": 18,
@@ -113,7 +113,7 @@
           },
           {
             "result": {
-              "duration": 336855100,
+              "duration": 444780000,
               "status": "passed"
             },
             "line": 19,
@@ -141,7 +141,7 @@
           },
           {
             "result": {
-              "duration": 440424400,
+              "duration": 530319300,
               "status": "passed"
             },
             "line": 22,
@@ -153,9 +153,8 @@
           },
           {
             "result": {
-              "duration": 1850400,
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat steps.ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form(ContactUsSteps.java:81)\r\n\tat ✽.Then the information should successfully be submitted via the contact us form(ContactUs.feature:23)\r\n",
-              "status": "pending"
+              "duration": 47385100,
+              "status": "passed"
             },
             "line": 23,
             "name": "the information should successfully be submitted via the contact us form",
@@ -168,7 +167,7 @@
         "tags": [
           {
             "line": 13,
-            "name": "@important"
+            "name": "@live"
           }
         ]
       }

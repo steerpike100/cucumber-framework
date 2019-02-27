@@ -10,7 +10,7 @@ Feature: Submit data to webdriveruniversity.com using contact us form
     Given I access webdriveruniversity
     When I click on the contact us button
 
-    @important
+  @live
   Scenario: Submit information to using the contact us form
     And I enter a valid first name
     And I enter a valid last name
@@ -22,14 +22,15 @@ Feature: Submit data to webdriveruniversity.com using contact us form
     When I click on the submit button
     Then the information should successfully be submitted via the contact us form
 
-#  Scenario: Submit information to using the contact us form
-#    And I enter a valid first name
-#    And I enter a valid last name
-#      | gates | bill | bruno |
-#    And I enter a valid email address
-#    And I enter comments
-#      | comment five   | comment six  |
-#      | comment seven | comment eight |
-#    When I click on the submit button
-#    Then the information should successfully be submitted via the contact us form
+  @staging
+  Scenario: Submit information to using the contact us form
+    And I enter a valid first name
+    And I enter a valid last name
+      | gates | bill | bruno |
+    And I enter a valid email address
+    And I enter comments
+      | comment five  | comment six   |
+      | comment seven | comment eight |
+    When I click on the submit button
+    Then the information should successfully be submitted via the contact us form
 
