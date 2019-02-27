@@ -1,93 +1,161 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("ContactUs.feature");
 formatter.feature({
   "line": 1,
-  "name": "Login to account",
-  "description": "Existing user should be able to login to account using correct credentials",
-  "id": "login-to-account",
+  "name": "Submit data to webdriveruniversity.com using contact us form",
+  "description": "As a user\r\nI should be able to submit information via the contact us form\r\nSo that I can contact the website\r\n\r\nRules\r\n- if a user clicks on the reset button, all information should be removed",
+  "id": "submit-data-to-webdriveruniversity.com-using-contact-us-form",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 4025235900,
+  "duration": 2844205400,
   "status": "passed"
 });
-formatter.scenario({
-  "line": 4,
-  "name": "Login to account with correct credentials",
-  "description": "",
-  "id": "login-to-account;login-to-account-with-correct-credentials",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 5,
-  "name": "User navigates to stackoverflow website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "User clicks on the login button on homepage",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "User enters a valid username",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "User enters a valid password",
-  "keyword": "And "
-});
-formatter.step({
+formatter.background({
   "line": 9,
-  "name": "User clicks on the login button",
-  "keyword": "When "
+  "name": "",
+  "description": "",
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.step({
   "line": 10,
-  "name": "User should be taken to the successful login page",
+  "name": "I access webdriveruniversity",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 11,
+  "name": "I click on the contact us button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ContactUsSteps.i_access_webdriveruniversity()"
+});
+formatter.result({
+  "duration": 936373000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ContactUsSteps.i_click_on_the_contact_us_button()"
+});
+formatter.result({
+  "duration": 3128568500,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 14,
+  "name": "Submit information to using the contact us form",
+  "description": "",
+  "id": "submit-data-to-webdriveruniversity.com-using-contact-us-form;submit-information-to-using-the-contact-us-form",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 13,
+      "name": "@important"
+    }
+  ]
+});
+formatter.step({
+  "line": 15,
+  "name": "I enter a valid first name",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "I enter a valid last name",
+  "rows": [
+    {
+      "cells": [
+        "woods",
+        "jackson",
+        "jones"
+      ],
+      "line": 17
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
+  "name": "I enter a valid email address",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "I enter comments",
+  "rows": [
+    {
+      "cells": [
+        "comment one",
+        "comment two"
+      ],
+      "line": 20
+    },
+    {
+      "cells": [
+        "comment three",
+        "comment four"
+      ],
+      "line": 21
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 22,
+  "name": "I click on the submit button",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "the information should successfully be submitted via the contact us form",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginSteps.user_navigates_to_stackoverflow_website()"
+  "location": "ContactUsSteps.i_enter_first_name()"
 });
 formatter.result({
-  "duration": 63680400,
+  "duration": 274887500,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_clicks_on_the_login_button_on_homepage()"
+  "location": "ContactUsSteps.i_enter_last_name(DataTable)"
 });
 formatter.result({
-  "duration": 59100,
+  "duration": 101078800,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_enters_a_valid_username()"
+  "location": "ContactUsSteps.i_enter_an_email_address()"
 });
 formatter.result({
-  "duration": 67300,
+  "duration": 173000800,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_enters_a_valid_password()"
+  "location": "ContactUsSteps.i_enter_comments(DataTable)"
 });
 formatter.result({
-  "duration": 49400,
+  "duration": 289337900,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_clicks_on_the_login_button()"
+  "location": "ContactUsSteps.i_click_on_the_submit_button()"
 });
 formatter.result({
-  "duration": 141000,
+  "duration": 489260100,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_should_be_taken_to_the_successful_login_page()"
+  "location": "ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form()"
 });
 formatter.result({
-  "duration": 70700,
+  "duration": 1579000,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat steps.ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form(ContactUsSteps.java:81)\r\n\tat ✽.Then the information should successfully be submitted via the contact us form(ContactUs.feature:23)\r\n",
+  "status": "pending"
+});
+formatter.after({
+  "duration": 675781600,
   "status": "passed"
 });
 });
