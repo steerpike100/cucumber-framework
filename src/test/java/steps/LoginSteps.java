@@ -42,7 +42,6 @@ public class LoginSteps {
 
     @When("^I enter a username$")
     public void i_enter_a_username() throws Throwable {
-        String winHandleBefore = driver.getWindowHandle();
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }

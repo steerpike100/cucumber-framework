@@ -14,5 +14,5 @@ Feature: Login to WebdriverUniversity
     Examples:
       | url                                | username  | password     | message              |
       | http://www.webdriveruniversity.com | user1     | pass1        | validation failed    |
-      | http://www.webdriveruniversity.com | webdriver | webdriver123 | validation succeeded |
+      | http://www.webdriveruniversity.com | webdriver | webdriver123 | validation succeeded666 |
 
