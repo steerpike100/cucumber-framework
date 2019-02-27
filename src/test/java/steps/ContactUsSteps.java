@@ -81,17 +81,7 @@ public class ContactUsSteps {
         throw new PendingException();
     }
 
-    @When("^I click on the reset button$")
-    public void i_click_on_the_reset_button() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
 
-    @Then("^all information which was listed by the user on the contact us form should now be removed$")
-    public void all_information_which_was_listed_by_the_user_on_the_contact_us_form_should_now_be_removed() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
 
     @After
     public void tearDown(){

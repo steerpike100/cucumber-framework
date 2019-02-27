@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2844205400,
+  "duration": 2706783300,
   "status": "passed"
 });
 formatter.background({
@@ -31,14 +31,14 @@ formatter.match({
   "location": "ContactUsSteps.i_access_webdriveruniversity()"
 });
 formatter.result({
-  "duration": 936373000,
+  "duration": 939054600,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_click_on_the_contact_us_button()"
 });
 formatter.result({
-  "duration": 3128568500,
+  "duration": 3122658300,
   "status": "passed"
 });
 formatter.scenario({
@@ -115,47 +115,47 @@ formatter.match({
   "location": "ContactUsSteps.i_enter_first_name()"
 });
 formatter.result({
-  "duration": 274887500,
+  "duration": 214262500,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_enter_last_name(DataTable)"
 });
 formatter.result({
-  "duration": 101078800,
+  "duration": 79122100,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_enter_an_email_address()"
 });
 formatter.result({
-  "duration": 173000800,
+  "duration": 149773400,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_enter_comments(DataTable)"
 });
 formatter.result({
-  "duration": 289337900,
+  "duration": 336855100,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.i_click_on_the_submit_button()"
 });
 formatter.result({
-  "duration": 489260100,
+  "duration": 440424400,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form()"
 });
 formatter.result({
-  "duration": 1579000,
+  "duration": 1850400,
   "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat steps.ContactUsSteps.the_information_should_successfully_be_submitted_via_the_contact_us_form(ContactUsSteps.java:81)\r\n\tat ✽.Then the information should successfully be submitted via the contact us form(ContactUs.feature:23)\r\n",
   "status": "pending"
 });
 formatter.after({
-  "duration": 675781600,
+  "duration": 669460400,
   "status": "passed"
 });
 });
