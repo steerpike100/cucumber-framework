@@ -2,10 +2,10 @@
 <testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Cucumber Framework" duration-ms="37526" started-at="2019-02-27T12:56:31Z" finished-at="2019-02-27T12:57:09Z">
+  <suite name="Surefire suite" duration-ms="6322" started-at="2019-02-27T15:25:28Z" finished-at="2019-02-27T15:25:34Z">
     <groups>
     </groups>
-    <test name="Cucumber Tests" duration-ms="37526" started-at="2019-02-27T12:56:31Z" finished-at="2019-02-27T12:57:09Z">
-    </test> <!-- Cucumber Tests -->
-  </suite> <!-- Cucumber Framework -->
+    <test name="Surefire test" duration-ms="6322" started-at="2019-02-27T15:25:28Z" finished-at="2019-02-27T15:25:34Z">
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
