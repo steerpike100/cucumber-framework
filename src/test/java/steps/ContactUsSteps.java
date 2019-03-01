@@ -16,32 +16,28 @@ public class ContactUsSteps extends DriverFactory {
 
     @Given("^I access webgetDriver()university contact us form$")
     public void i_access_webdriver_university_contact_us_form() throws Throwable {
-        getDriver().get("http://www.webgetDriver()university.com/Contact-Us/contactus.html");
+       contactUsPage.getContactUsPage();
     }
 
     @When("^I enter a valid first name$")
     public void i_enter_a_valid_first_name() throws Throwable {
-        Thread.sleep(3000);
-        getDriver().findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Tom");
+        contactUsPage.enterFirstName();
     }
 
     @When("^I enter a valid last name$")
-    public void i_enter_a_valid_last_name(DataTable dataTable) throws Throwable {
+    public void i_enter_a_valid_last_name(DataTable dataTable, int row, int column) throws Throwable {
 
-        List<List<String>> data = dataTable.raw();
-        getDriver().findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(data.get(0).get(1));
+        contactUsPage.enterLastName(dataTable, row, column);
     }
 
     @When("^I enter a valid email address$")
     public void i_enter_a_valid_email_address() throws Throwable {
-        getDriver().findElement(By.xpath("//input[@placeholder='Email Address']")).sendKeys("webgetDriver()university@outlook.com");
+        contactUsPage.enterEmailAddress();
     }
 
     @When("^I enter comments$")
-    public void i_enter_comments(DataTable dataTable) throws Throwable {
-        List<List<String>> data = dataTable.raw();
-        getDriver().findElement(By.xpath("//textarea[@name='message']")).sendKeys(data.get(0).get(0));
-        getDriver().findElement(By.xpath("//textarea[@name='message']")).sendKeys(data.get(0).get(1));
+    public void i_enter_comments(DataTable dataTable, int row, int column) throws Throwable {
+        contactUsPage.enterComments(dataTable, row, column);
     }
 
     @When("^I click on the submit button$")

@@ -25,7 +25,8 @@ public class ProductSteps extends DriverFactory {
 
     @Then("^user should be presented with a promo alert$")
     public void user_should_be_presented_with_a_promo_alert() throws Throwable {
-        getDriver().findElement(By.xpath("//button[contains(text(),'Proceed')]")).click();
+        Thread.sleep(3000);
+            getDriver().findElement(By.xpath("//button[contains(text(),'Proceed')]")).click();
 
     }
 }
