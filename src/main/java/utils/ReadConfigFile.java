@@ -15,12 +15,9 @@ public class ReadConfigFile {
 
     public ReadConfigFile() {
         try {
-//            input = ReadConfigFile.class.getClassLoader().getResourceAsStream(Constant.CONFIG_PROPERTIES_DIRECTORY);
-//            prop = new Properties();
-//            prop.load(input);
-        reader = new BufferedReader(new FileReader(Constant.CONFIG_PROPERTIES_DIRECTORY));
+            input = ReadConfigFile.class.getClassLoader().getResourceAsStream(Constant.CONFIG_PROPERTIES_DIRECTORY);
             prop = new Properties();
-            prop.load(reader);
+            prop.load(input);
 
         } catch (IOException e) {
             e.printStackTrace();

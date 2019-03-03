@@ -6,9 +6,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import pageobjects.BasePage;
 import pageobjects.ContactUsPage;
 import pageobjects.ProductsPage;
 
+import java.io.FileInputStream;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
@@ -16,17 +19,20 @@ public class DriverFactory {
     public static WebDriver driver;
     public static ProductsPage productsPage;
     public static ContactUsPage contactUsPage;
+    public static BasePage basePage;
 
     public WebDriver getDriver() {
         try {
-            //Read Config
-            ReadConfigFile file = new ReadConfigFile();
-            String browser = file.getBrowser();
 
-            switch (browser) {
+            Properties p = new Properties();
+            FileInputStream fi = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\properties\\config.properties");
+            p.load(fi);
+            String browserName = p.getProperty("browser");
+
+            switch (browserName) {
                 case "firefox":
                     if (driver == null) {
-                        System.setProperty("webdriver.gecko.driver", Constant.CHROME_DRIVER_DIRECTORY);
+                        System.setProperty("webdriver.gecko.driver", Constant.GECKO_DRIVER_DIRECTORY);
                         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
                         capabilities.setCapability("marionette", true);
                         driver = new FirefoxDriver();
@@ -53,7 +59,6 @@ public class DriverFactory {
 
                     }
                     break;
-
 
             }
         } catch (Exception e) {

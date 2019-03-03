@@ -1,6 +1,6 @@
 C:\udemy\CucumberFramework\src\main\java\utils\DriverFactory.java
+C:\udemy\CucumberFramework\src\main\java\pageobjects\BasePage.java
+C:\udemy\CucumberFramework\src\main\java\pageobjects\ProductsPage.java
 C:\udemy\CucumberFramework\src\main\java\utils\Constant.java
-C:\udemy\CucumberFramework\src\main\java\steps\MasterHooks.java
-C:\udemy\CucumberFramework\src\main\java\steps\ProductSteps.java
 C:\udemy\CucumberFramework\src\main\java\utils\ReadConfigFile.java
-C:\udemy\CucumberFramework\src\main\java\steps\ContactUsSteps.java
+C:\udemy\CucumberFramework\src\main\java\pageobjects\ContactUsPage.java

@@ -1,6 +1,8 @@
 package pageobjects;
 
 import cucumber.api.DataTable;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -24,7 +26,7 @@ public class ContactUsPage extends BasePage {
     }
 
     public ContactUsPage getContactUsPage() throws IOException {
-        getDriver().get("http://www.webgetDriver()university.com/Contact-Us/contactus.html");
+        getDriver().get("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
         return new ContactUsPage();
     }
 
@@ -37,7 +39,6 @@ public class ContactUsPage extends BasePage {
         List<List<String>> data = dataTable.raw();
         sendKeysToWebElement(textFieldLastName, data.get(row).get(column));
         return new ContactUsPage();
-
     }
 
     public ContactUsPage enterEmailAddress() throws Exception {
@@ -49,13 +50,18 @@ public class ContactUsPage extends BasePage {
         List<List<String>> data = dataTable.raw();
         sendKeysToWebElement(textFieldMessage, data.get(row).get(column));
         return new ContactUsPage();
-
     }
 
-    public ContactUsPage clickSubmitButton() throws IOException {
-        clickOnElementUsingCustomTimeout(submit, driver, 10 );
+    public ContactUsPage clickSubmitButton() throws IOException, InterruptedException {
+        waitAndClickElement(submit);
         return new ContactUsPage();
     }
 
-
+    public ContactUsPage confirmContactUsFormSubmissionWasSuccessful() throws IOException, InterruptedException {
+        WebElement thanksContactUsPage = getDriver().findElement(By.xpath(".//*[@id='contact_reply']/h1"));
+        System.out.println(thanksContactUsPage.getText());
+        waitUntilWebElementIsVisible(thanksContactUsPage);
+        Assert.assertEquals("thankyouforyourmessage!", thanksContactUsPage.getText().toLowerCase().replaceAll("[ ()0-9]", ""));
+        return new ContactUsPage();
+    }
 }

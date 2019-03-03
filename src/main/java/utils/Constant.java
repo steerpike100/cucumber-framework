@@ -11,9 +11,4 @@ public class Constant {
     public static final String CHROME_DRIVER_DIRECTORY = System.getProperty("user.dir") + "\\resources\\chromedriver.exe";
     public static final String IE_DRIVER_DIRECTORY = System.getProperty("user.dir") + "\\resources\\IEDriverServer.exe";
 
-    public static void main(String[] args) {
-        System.out.println(CONFIG_PROPERTIES_DIRECTORY);
-    }
-
-
 }
