@@ -8,6 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import pageobjects.BasePage;
 import pageobjects.ContactUsPage;
+import pageobjects.LoginPage;
 import pageobjects.ProductsPage;
 
 import java.io.FileInputStream;
@@ -19,6 +20,7 @@ public class DriverFactory {
     public static WebDriver driver;
     public static ProductsPage productsPage;
     public static ContactUsPage contactUsPage;
+    public static LoginPage loginPage;
   //  public static BasePage basePage;
 
     public WebDriver getDriver() {
@@ -69,6 +71,7 @@ public class DriverFactory {
             driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
             contactUsPage = PageFactory.initElements(driver, ContactUsPage.class);
             productsPage = PageFactory.initElements(driver, ProductsPage.class);
+            loginPage = PageFactory.initElements(driver, LoginPage.class);
         }
         return driver;
     }

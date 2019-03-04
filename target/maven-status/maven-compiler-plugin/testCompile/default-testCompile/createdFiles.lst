@@ -1,4 +1,5 @@
 runner\RunCukesTest.class
 steps\ProductSteps.class
 steps\ContactUsSteps.class
+steps\LoginPageSteps.class
 steps\MasterHooks.class

@@ -32,6 +32,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -45,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 4, 2019 01:37:34 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Mar 4, 2019 02:40:58 PM</span>
 				</a>
 			</li>
 			<li>
@@ -71,6 +72,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -83,7 +86,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@important</a></li>
+					<li><a href='#'>@runthis</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -131,10 +134,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>10</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='20%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='60%'>3</span> others
 				</div>
 			</div>
 		</div>
@@ -146,10 +149,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='83.333%'><span class='strong'>10</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='20%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='16.667%'>2</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='60%'>3</span> others
 				</div>
 			</div>
 		</div>
@@ -164,90 +167,26 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Submit data to webdriveruniversity.com using contact us form</span>
-						<span class='test-time'>Mar 4, 2019 01:37:35 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Login to website</span>
+						<span class='test-time'>Mar 4, 2019 02:40:58 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Mar 4, 2019 01:37:35 PM</span>
-	<span class='label end-time'>Mar 4, 2019 01:37:39 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+453ms</span>
+	<span class='label start-time'>Mar 4, 2019 02:40:58 PM</span>
+	<span class='label end-time'>Mar 4, 2019 02:41:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+31ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
-				<li class='node level-1  pass' status='pass' test-id='2'>
+				<li class='node level-1  fail' status='fail' test-id='2'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: Submit valid data via contact us form</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:35 PM</span>
-						<span class='node-duration'>0h 0m 4s+399ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2 leaf pass' status='pass' test-id='3'>
-					<div class='collapsible-header'>
-						<div class='node-name'>Given I access webdriveruniversity contact us form</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:37 PM</span>
-						<span class='node-duration'>0h 0m 0s+616ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:38 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='4'>
-					<div class='collapsible-header'>
-						<div class='node-name'>When I enter a valid first name</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:38 PM</span>
-						<span class='node-duration'>0h 0m 0s+144ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:38 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='5'>
-					<div class='collapsible-header'>
-						<div class='node-name'>And I enter a valid last name</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:38 PM</span>
-						<span class='node-duration'>0h 0m 0s+131ms</span>
-						<span class='test-status right pass'>pass</span>
+						<div class='node-name'>Scenario Outline:</div>						
+						<span class='node-time'>Mar 4, 2019 02:40:58 PM</span>
+						<span class='node-duration'>0h 0m 3s+29ms</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -262,198 +201,27 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:37:38 PM</td>
-													<td class='step-details'><table><tr><td>woods</td><td>jackson</td><td>jones</td></tr></table></td>
-												</tr>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:38 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='6'>
-					<div class='collapsible-header'>
-						<div class='node-name'>And I enter a valid email address</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:38 PM</span>
-						<span class='node-duration'>0h 0m 0s+171ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:38 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='7'>
-					<div class='collapsible-header'>
-						<div class='node-name'>And I enter comments</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:38 PM</span>
-						<span class='node-duration'>0h 0m 0s+177ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:37:38 PM</td>
-													<td class='step-details'><table><tr><td>example comment one</td><td>example comment two</td></tr></table></td>
-												</tr>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:38 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='8'>
-					<div class='collapsible-header'>
-						<div class='node-name'>When I click on the submit button</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:38 PM</span>
-						<span class='node-duration'>0h 0m 0s+568ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:39 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='9'>
-					<div class='collapsible-header'>
-						<div class='node-name'>Then the information should successfully be submitted via the contact us form</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:39 PM</span>
-						<span class='node-duration'>0h 0m 0s+56ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:39 PM</td>
-													<td class='step-details'>passed</td>
-												</tr>
-										</tbody>
-									</table>
-								</div>
-						</div>
-				</li>
-						</ul>
-				</li>
-	</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='10'>
-					<div class='test-heading'>
-						<span class='test-name'>Products page</span>
-						<span class='test-time'>Mar 4, 2019 01:37:40 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Mar 4, 2019 01:37:40 PM</span>
-	<span class='label end-time'>Mar 4, 2019 01:37:45 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+242ms</span>
-</div>
-	<ul class='collapsible node-list' data-collapsible='accordion'>
-		
-				<li class='node level-1  pass' status='pass' test-id='11'>
-					<div class='collapsible-header'>
-						<div class='node-name'>Scenario Outline: validate promo code alert is visible when clicking on the special offers link</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:40 PM</span>
-						<span class='node-duration'>0h 0m 5s+242ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-						<div class='collapsible-body'>
-								<div class='node-steps'>
-									<table class='bordered table-results'>
-										<thead>
-											<tr>
-												<th>Status</th>
-												<th>Timestamp</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-										<tbody>
-												<tr class='log' status='info'>
-													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>1:37:40 PM</td>
-													<td class='step-details'><table><tr><td>url</td><td>button</td></tr><tr><td>http://www.webdriveruniversity.com/Page-Object-Model/products.html</td><td>#container-special-offers</td></tr></table></td>
+													<td class='timestamp'>2:40:58 PM</td>
+													<td class='step-details'><table><tr><td>username</td><td>password</td><td>message</td></tr><tr><td>webdriver</td><td>webdriver123</td><td>validation succeeded</td></tr></table></td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-2  pass' status='pass' test-id='12'>
+				<li class='node level-2  fail' status='fail' test-id='3'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Scenario: validate promo code alert is visible when clicking on the special offers link</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:40 PM</span>
-						<span class='node-duration'>0h 0m 5s+239ms</span>
-						<span class='test-status right pass'>pass</span>
+						<div class='node-name'>Scenario:</div>						
+						<span class='node-time'>Mar 4, 2019 02:40:58 PM</span>
+						<span class='node-duration'>0h 0m 2s+958ms</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
-				<li class='node level-3 leaf pass' status='pass' test-id='13'>
+				<li class='node level-3 leaf pass' status='pass' test-id='4'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Given user navigates to "http://www.webdriveruniversity.com/Page-Object-Model/products.html" website</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:41 PM</span>
-						<span class='node-duration'>0h 0m 1s+124ms</span>
+						<div class='node-name'>Given I have navigated to the login page</div>						
+						<span class='node-time'>Mar 4, 2019 02:41:01 PM</span>
+						<span class='node-duration'>0h 0m 0s+462ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -469,7 +237,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:42 PM</td>
+													<td class='timestamp'>2:41:01 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -477,12 +245,12 @@
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf pass' status='pass' test-id='14'>
+				<li class='node level-3 leaf fail' status='fail' test-id='5'>
 					<div class='collapsible-header'>
-						<div class='node-name'>When user clicks on the "#container-special-offers"</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:42 PM</span>
-						<span class='node-duration'>0h 0m 0s+812ms</span>
-						<span class='test-status right pass'>pass</span>
+						<div class='node-name'>When I enter a valid username webdriver</div>						
+						<span class='node-time'>Mar 4, 2019 02:41:01 PM</span>
+						<span class='node-duration'>0h 0m 0s+15ms</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -495,22 +263,96 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:43 PM</td>
-													<td class='step-details'>passed</td>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>2:41:01 PM</td>
+													<td class='step-details'><pre>cucumber.runtime.CucumberException: Don't know how to convert "webdriver" into cucumber.api.DataTable.
+Try writing your own converter:
+
+@cucumber.deps.com.thoughtworks.xstream.annotations.XStreamConverter(DataTableConverter.class)
+public class DataTable {}
+
+	at cucumber.runtime.ParameterInfo.convert(ParameterInfo.java:150)
+	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:132)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:147)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+</pre></td>
 												</tr>
 										</tbody>
 									</table>
 								</div>
 						</div>
 				</li>
-				<li class='node level-3 leaf pass' status='pass' test-id='15'>
+				<li class='node level-3 leaf skip' status='skip' test-id='6'>
 					<div class='collapsible-header'>
-						<div class='node-name'>Then user should be presented with a promo alert</div>						
-						<span class='node-time'>Mar 4, 2019 01:37:43 PM</span>
-						<span class='node-duration'>0h 0m 1s+827ms</span>
-						<span class='test-status right pass'>pass</span>
+						<div class='node-name'>And I enter a valid password webdriver123</div>						
+						<span class='node-time'>Mar 4, 2019 02:41:01 PM</span>
+						<span class='node-duration'>0h 0m 0s+1ms</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -523,10 +365,66 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>1:37:45 PM</td>
-													<td class='step-details'>passed</td>
+												<tr class='log' status='skip'>
+													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+													<td class='timestamp'>2:41:01 PM</td>
+													<td class='step-details'>skipped</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf skip' status='skip' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>And I click the login button</div>						
+						<span class='node-time'>Mar 4, 2019 02:41:01 PM</span>
+						<span class='node-duration'>0h 0m 0s+2ms</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='skip'>
+													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+													<td class='timestamp'>2:41:01 PM</td>
+													<td class='step-details'>skipped</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-3 leaf skip' status='skip' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Then I am presented with a successful validation validation succeeded</div>						
+						<span class='node-time'>Mar 4, 2019 02:41:01 PM</span>
+						<span class='node-duration'>0h 0m 0s+1ms</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='skip'>
+													<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+													<td class='timestamp'>2:41:01 PM</td>
+													<td class='step-details'>skipped</td>
 												</tr>
 										</tbody>
 									</table>
@@ -592,15 +490,15 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@important</span>
+						<span class='category-name'>@runthis</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -615,9 +513,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 4, 2019 01:37:35 PM</td>
-										<td class='linked' test-id='2'>Submit data to webdriveruniversity.com using contact us form.Scenario: Submit valid data via contact us form</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Mar 4, 2019 02:40:58 PM</td>
+										<td class='linked' test-id='3'>Login to website.Scenario Outline:.Scenario:</td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -636,6 +534,141 @@
 	</div>
 </div>
 <!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>cucumber.runtime.CucumberException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 4, 2019 02:41:01 PM</td>
+                                                        <td class='linked' test-id='5'>Login to website.Scenario Outline:.Scenario:.When I enter a valid username webdriver</td>
+                                                        <td><pre><pre>cucumber.runtime.CucumberException: Don't know how to convert "webdriver" into cucumber.api.DataTable.
+Try writing your own converter:
+
+@cucumber.deps.com.thoughtworks.xstream.annotations.XStreamConverter(DataTableConverter.class)
+public class DataTable {}
+
+	at cucumber.runtime.ParameterInfo.convert(ParameterInfo.java:150)
+	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:68)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)
+	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)
+	at org.testng.TestRunner$1.run(TestRunner.java:697)
+	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)
+	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)
+	at org.testng.TestRunner.run(TestRunner.java:629)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:132)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:147)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -645,31 +678,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>10</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 4, 2019 01:37:34 PM</div>
+					<div class='panel-lead'>Mar 4, 2019 02:40:58 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 4, 2019 01:37:46 PM</div>
+			 		<div class='panel-lead'>Mar 4, 2019 02:41:02 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>11,152ms</div>
+					<div class='panel-lead'>4,211ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -684,9 +717,9 @@
 							<th>Others</th>
 						</tr>
 						<tr>
-							<td>@important</td>
-							<td>1</td>
+							<td>@runthis</td>
 							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 						</tr>
 					</table>
@@ -702,22 +735,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 10,
-				failParent: 0,
+				passParent: 1,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
+				skipParent: 3,
+				exceptionsParent: 4,
 				
-				passChild: 10,
-				failChild: 0,
+				passChild: 1,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
-				infoChild: 2,
-				exceptionsChild: 0,
+				skipChild: 3,
+				infoChild: 0,
+				exceptionsChild: 4,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

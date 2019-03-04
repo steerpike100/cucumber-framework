@@ -1,6 +1,7 @@
-utils\ReadConfigFile.class
-pageobjects\BasePage.class
 utils\DriverFactory.class
 pageobjects\ProductsPage.class
+pageobjects\LoginPage.class
+utils\ReadConfigFile.class
+pageobjects\BasePage.class
 pageobjects\ContactUsPage.class
 utils\Constant.class
