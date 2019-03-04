@@ -25,7 +25,12 @@ public class LoginPage extends BasePage {
 
     public LoginPage clickLoginButton() throws InterruptedException, IOException, AWTException {
         waitAndClickElement(loginButton);
-        closeAlertPopupBox();
+
+        boolean alert = isAlertPresent();
+        if(alert){
+            closeAlertPopupBox();
+        }
+
         return new LoginPage();
     }
 }
