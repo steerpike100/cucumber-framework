@@ -40,7 +40,7 @@ public class ClickButtonsPage extends BasePage {
     public void buttonsPageHasLoaded() {
 
         for(String windowHandle : driver.getWindowHandles()){
-            driver.switchTo(windowHandle);
+            driver.switchTo().window(windowHandle);
         }
 
         waitForUrlToContain("Click-Buttons", 20);
@@ -60,8 +60,7 @@ public class ClickButtonsPage extends BasePage {
         switch (n) {
             case 0:
                 waitAndClickElement(buttonOne);
-                isAlertPresent();
-                alertText = switchToAlertAndGetText();
+                alertText = buttonOne.getText();
                 message = webElementButton;
                 break;
             case 1:

@@ -231,6 +231,18 @@ public class BasePage extends DriverFactory {
         wait.until(condition);
     }
 
+    public void waitForAlertIsPresent(){
+        try{
+            WebDriverWait wait = new WebDriverWait(driver, 10);
+            wait.until(ExpectedConditions.alertIsPresent());
+            Alert alert = driver.switchTo().alert();
+            alert.getText();
+            alert.accept();
+        }catch(NoAlertPresentException e){
+            e.printStackTrace();
+        }
+    }
+
 
     public Boolean waitForIsDisplayed(WebElement element, Integer... timeout) {
         try {
@@ -376,6 +388,7 @@ public class BasePage extends DriverFactory {
 
     public boolean isAlertPresent() {
         try {
+            Thread.sleep(3000);
             driver.switchTo().alert();
             return true;
         } catch (Exception e) {
