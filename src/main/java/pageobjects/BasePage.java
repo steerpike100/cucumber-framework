@@ -23,22 +23,10 @@ public class BasePage extends DriverFactory {
         jsExecutor = ((JavascriptExecutor) driver);
     }
 
-    /**********************************************************************************
-     **FIND METHODS
-     **********************************************************************************/
-    public WebElement find(By locator) {
-        return driver.findElement(locator);
-    }
-
 
     /**********************************************************************************
      **CLICK METHODS
      **********************************************************************************/
-
-    public void click(By locator){
-        find(locator).click();
-    }
-
 
     public void waitAndClickElement(WebElement element) throws InterruptedException {
         boolean clicked = false;
@@ -225,18 +213,50 @@ public class BasePage extends DriverFactory {
      **WAIT METHODS
      **********************************************************************************/
 
-    private void waitFor(ExpectedCondition<WebElement> condition, Integer timeout) {
+
+//    public void waitFor(ExpectedCondition<WebElement> condition, Integer timeout) {
+//        timeout = timeout != null ? timeout : 5;
+//        WebDriverWait wait = new WebDriverWait(driver, timeout);
+//        wait.until(condition);
+//    }
+    public void waitFor(ExpectedCondition<WebElement> condition, Integer timeout) {
         timeout = timeout != null ? timeout : 5;
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         wait.until(condition);
     }
 
-    public boolean waitForIsDisplayed(By locator, Integer... timeout) {
+    public void waitForBool(ExpectedCondition<Boolean> condition, Integer timeout){
+        timeout = timeout !=null ? timeout : 5;
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        wait.until(condition);
+    }
+
+
+    public Boolean waitForIsDisplayed(WebElement element, Integer... timeout) {
         try {
-            waitFor(ExpectedConditions.visibilityOfElementLocated(locator),
-                    (timeout.length > 0 ? timeout[0] : null));
-        } catch (TimeoutException te) {
-            System.out.println("The expected element: " + locator + "ws not found on the page");
+            waitFor(ExpectedConditions.visibilityOf(element), (timeout.length > 0 ? timeout[0] : null));
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public Boolean waitForElementToBeClickable(WebElement element, Integer... timeout) {
+        try {
+            waitFor(ExpectedConditions.elementToBeClickable(element), (timeout.length > 0 ? timeout[0] : null));
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public Boolean waitForUrlToContain(String url, Integer... timeout){
+        try{
+            waitForBool(ExpectedConditions.urlContains(url), (timeout.length>0 ? timeout[0]:null));
+        }catch(TimeoutException e){
+            e.printStackTrace();
             return false;
         }
         return true;
@@ -363,7 +383,13 @@ public class BasePage extends DriverFactory {
         }
     }
 
-    public void closeAlertPopupBox() throws AWTException, InterruptedException {
+    public String switchToAlertAndGetText(){
+        Alert alert = driver.switchTo().alert();
+        return alert.getText();
+    }
+
+
+    public void closeAlertPopupBox() {
         try {
             Alert alert = this.wait.until(ExpectedConditions.alertIsPresent());
             alert.accept();

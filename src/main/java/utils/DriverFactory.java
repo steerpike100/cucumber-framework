@@ -6,10 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
-import pageobjects.BasePage;
-import pageobjects.ContactUsPage;
-import pageobjects.LoginPage;
-import pageobjects.ProductsPage;
+import pageobjects.*;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -21,6 +18,7 @@ public class DriverFactory {
     public static ProductsPage productsPage;
     public static ContactUsPage contactUsPage;
     public static LoginPage loginPage;
+    public static ClickButtonsPage clickButtonsPage;
   //  public static BasePage basePage;
 
     public WebDriver getDriver() {
@@ -72,6 +70,7 @@ public class DriverFactory {
             contactUsPage = PageFactory.initElements(driver, ContactUsPage.class);
             productsPage = PageFactory.initElements(driver, ProductsPage.class);
             loginPage = PageFactory.initElements(driver, LoginPage.class);
+            clickButtonsPage = PageFactory.initElements(driver, ClickButtonsPage.class);
         }
         return driver;
     }

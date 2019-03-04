@@ -39,13 +39,11 @@ public class LoginPageSteps extends DriverFactory {
 
     @Then("^I am presented with a successful validation ([^\"]*)$")
     public void iAmPresentedWithASuccessfulValidation(String message) throws Throwable {
-
         Alert alert = driver.switchTo().alert();
         System.out.println(alert.getText());
-        Assert.assertEquals(message.toLowerCase().replaceAll("\\s*", ""), alert.getText().toLowerCase().replaceAll("\\s*", ""));
+        Assert.assertEquals( alert.getText().toLowerCase().replaceAll("\\s*", ""),message.toLowerCase().replaceAll("\\s*", ""));
         Thread.sleep(3000);
         alert.accept();
     }
-
 
 }

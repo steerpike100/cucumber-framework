@@ -1,8 +1,10 @@
 package pageobjects;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.awt.*;
 import java.io.IOException;
@@ -23,8 +25,8 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage clickLoginButton() throws InterruptedException, IOException, AWTException {
-        waitAndClickElement(loginButton);
-        Alert alert = driver.switchTo().alert();
+        waitForElementToBeClickable(loginButton, 30);
+        getDriver().findElement(By.id("login-button")).click();
         return new LoginPage();
     }
 }

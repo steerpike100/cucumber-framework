@@ -20,10 +20,10 @@ public class ProductsPage extends BasePage {
         super();
     }
 
-    public void clickOnSpecialOffersButton(String locator) {
+    public void clickOnSpecialOffersButton(String locator) throws InterruptedException {
         By offersButton = By.cssSelector(locator);
-        waitForIsDisplayed(offersButton, 30);
-        click(offersButton);
+        waitForIsDisplayed(specialOffersButton, 30);
+        waitAndClickElement(specialOffersButton);
     }
 
     public ProductsPage clickOnProceedButtonPopUp() throws InterruptedException, IOException {
