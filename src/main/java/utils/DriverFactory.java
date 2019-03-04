@@ -19,7 +19,7 @@ public class DriverFactory {
     public static WebDriver driver;
     public static ProductsPage productsPage;
     public static ContactUsPage contactUsPage;
-    public static BasePage basePage;
+  //  public static BasePage basePage;
 
     public WebDriver getDriver() {
         try {
