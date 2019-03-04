@@ -25,12 +25,7 @@ public class LoginPage extends BasePage {
 
     public LoginPage clickLoginButton() throws InterruptedException, IOException, AWTException {
         waitAndClickElement(loginButton);
-
-        boolean alert = isAlertPresent();
-        if(alert){
-            closeAlertPopupBox();
-        }
-
+        Alert alert = driver.switchTo().alert();
         return new LoginPage();
     }
 }

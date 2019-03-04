@@ -4,6 +4,7 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -33,12 +34,17 @@ public class LoginPageSteps extends DriverFactory {
     @When("^I click the login button$")
     public void i_click_the_login_button() throws Throwable {
         loginPage.clickLoginButton();
+
     }
 
     @Then("^I am presented with a successful validation ([^\"]*)$")
     public void iAmPresentedWithASuccessfulValidation(String message) throws Throwable {
-        WebElement validationMessage =  getDriver().findElement(By.xpath(""));
-        Assert.assertEquals("Success Message", message, validationMessage.getText() );
+
+        Alert alert = driver.switchTo().alert();
+        System.out.println(alert.getText());
+        Assert.assertEquals(message.toLowerCase().replaceAll("\\s*", ""), alert.getText().toLowerCase().replaceAll("\\s*", ""));
+        Thread.sleep(3000);
+        alert.accept();
     }
 
 
